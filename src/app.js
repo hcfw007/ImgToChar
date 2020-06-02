@@ -16,5 +16,5 @@ img.onload = function() {
   canvas.width = w
   canvas.height = h
   let context = canvas.getContext('2d')
-  context.drawImage(img, 0, 0)
+  context.drawImage(img, 0, 0, w, h)
 }
