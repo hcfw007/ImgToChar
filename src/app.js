@@ -25,6 +25,13 @@ img.onload = function() {
   let context = canvas.getContext('2d')
   context.drawImage(img, 0, 0, w, h)
 
-  let imageData = context.getImageData(0, 0, 10, 10)
-  console.log(imageData)
+}
+
+function getGrey(data) {
+  let total = 0
+  for (let i = 0; i < (data.length / 4); i ++) {
+    let s = 4 * i
+    total += (data[s] * 0.3 + data[s + 1] * 0.59 + data[s +2] * 0.11) * data[s + 3] / 255
+  }
+  return total / (data.length / 4)
 }
