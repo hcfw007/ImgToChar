@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图片转字符画</title>
+    <style>
+        .result {
+            font-size: 14px;
+            line-height: 1;
+        }
+    </style>
 </head>
 <body>
     <h4>原图<input type="file" id="file" accept="image/*"></h4>
     <canvas id="origin" height="400" width="400"></canvas>
 
+    <h4>字符</h4>
+    <pre id="result"></pre>
+
+    <script src='./src/ASCIICharGreyLevel.js'></script>
     <script src="./src/app.js"></script>
 </body>
 </html>
