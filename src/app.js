@@ -35,6 +35,12 @@ img.onload = function() {
       let imageData = context.getImageData(j * charWidth, i * charHeight, charWidth, charHeight)
       let grey = getGrey(imageData.data)
       let char = String.fromCharCode(greyList[greyList.length - Math.floor((grey / 255) * greyList.length)])
+      if (char === '<') {
+        char = '&lt;'
+      }
+      if (char === '>') {
+        char = '&gt;'
+      }
       str += char
     }
     str += '\n'
