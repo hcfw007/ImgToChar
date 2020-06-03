@@ -9,8 +9,8 @@ file.onchange = function(event) {
   }
 }
 
-const charWidth = 8
-const charHeight = 14
+const charWidth = 2
+const charHeight = 3.5
 
 img.onload = function() {
   let h = img.naturalHeight
